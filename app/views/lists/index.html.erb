@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+
+<table class= "table table-striped table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><strong>Description:</strong></th>
+      <th scope="col"><strong>Completed:</strong></th>
+      <th scope="col"><strong>option:</strong></th>
+    </tr>
+  </thead>
+ 
+
+
+
+  <% @lists.each do |list| %>
+
+
+  
+
+
+    <tbody>
+    <tr>
+      <td><%= list.description %></td>
+      <td><%= list.completed %></td>
+      <td><%= link_to "Show this list", list %></td>
+    </tr>
+  </tbody>
+    
+  <% end %>
+  
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
